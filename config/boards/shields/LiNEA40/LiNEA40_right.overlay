@@ -68,14 +68,3 @@
     status = "okay";
     device = <&trackball>;
 };
-
-// 非マウスキーでAML解除
-&zip_temp_layer {
-    excluded-positions = <
-        16 // J
-        17 // K
-    >;
-    require-prior-idle-ms = <200>;
-    // トラボ誤爆防止
-};
-
