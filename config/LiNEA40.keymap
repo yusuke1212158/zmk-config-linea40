@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -107,6 +107,20 @@
             bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT_ARROW>;
             label = "KAKKO2";
         };
+
+        hankakuzenkaku: hankakuzenkaku {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_press>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "HANKAKUZENKAKU";
+        };
     };
 
     keymap {
@@ -114,10 +128,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E           &kp R    &kp T                                        &kp Y           &kp U  &kp I          &kp O            &kp P
-&kp A      &kp S         &kp D           &kp F    &kp G                                        &kp H           &kp J  &kp K          &kp L            &kp MINUS
-&kp Z      &kp X         &kp C           &kp V    &kp B                                        &kp N           &kp M  &kp COMMA      &kp DOT          &mt TAB RS(SLASH)
-&kp LCTRL  &kp LEFT_WIN  &kp LANGUAGE_2  &kp INS  &lt 2 SPACE  &lt 3 BACKSPACE    &lt 4 ENTER  &kp LANGUAGE_1         &kp RIGHT_ALT  &kp RIGHT_SHIFT  &mt GLOBE ESCAPE
+&kp Q      &kp W         &kp E           &kp R    &kp T                                        &kp Y            &kp U  &kp I          &kp O            &kp P
+&kp A      &kp S         &kp D           &kp F    &kp G                                        &kp H            &kp J  &kp K          &kp L            &kp MINUS
+&kp Z      &kp X         &kp C           &kp V    &kp B                                        &kp N            &kp M  &kp COMMA      &kp DOT          &mt TAB RS(SLASH)
+&kp LCTRL  &kp LEFT_WIN  &kp LANGUAGE_2  &kp INS  &lt 2 SPACE  &lt 3 BACKSPACE    &lt 4 ENTER  &hankakuzenkaku         &kp RIGHT_ALT  &kp RIGHT_SHIFT  &mt GLOBE ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
