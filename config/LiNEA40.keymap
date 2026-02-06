@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -152,10 +152,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET      &kp AMPERSAND  &kp ASTERISK   &kakko1         &kakko2
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)  &kp EQUAL      &kp PLUS       &kp MINUS       &kp TILDE
-&kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans             &trans           &trans                        &trans         &kp COLON      &kp LS(COMMA)  &kp LS(PERIOD)  &kp SLASH
-&kp ESCAPE            &trans                &trans             &trans           &trans       &mo 6    &trans  &trans                        &trans         &trans          &trans
+&kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET          &kp AMPERSAND  &kp ASTERISK   &kp PLUS        &kakko2
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)      &kp EQUAL      &kakko1        &kakko2         &kp TILDE
+&kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans             &trans           &trans                        &kp DOUBLE_QUOTES  &kp COLON      &kp LS(COMMA)  &kp LS(PERIOD)  &kp SLASH
+&kp ESCAPE            &trans                &trans             &trans           &trans       &mo 6    &trans  &trans                            &trans         &trans          &trans
             >;
         };
 
