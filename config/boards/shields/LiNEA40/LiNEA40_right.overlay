@@ -69,3 +69,10 @@
     status = "okay";
     device = <&trackball>;
 };
+
+&zip_temp_layer {
+    excluded-positions = <
+        16 // J
+        17 // K
+    >;
+};
