@@ -69,7 +69,6 @@
     status = "okay";
     device = <&trackball>;
 
-　　　input-processors = <&zip_temp_layer 1 10000>;
 };
 
 // 非マウスキーでAML解除
