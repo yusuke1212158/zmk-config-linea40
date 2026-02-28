@@ -77,7 +77,7 @@
         16 // J
         17 // K
     >;
-    require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <400>;
     // トラボ誤爆防止
 };
 
