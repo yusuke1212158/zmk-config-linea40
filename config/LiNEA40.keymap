@@ -174,7 +174,7 @@
 
         //3
 
-        FUNCTION1 {
+        MARK1 {
             bindings = <
 &kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET          &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)      &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp TILDE
@@ -185,7 +185,7 @@
 
         //4
 
-        FUNCTION2 {
+        MARK2 {
             bindings = <
 &kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET          &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)      &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp TILDE
@@ -196,28 +196,24 @@
 
         //5
 
-        SCROLL {
+        NUM1 {
             bindings = <
-&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                    &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                    &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
-&trans    &trans                  &trans        &trans                   &trans  &trans    &trans  &kp NUMBER_0                   &kp NUMBER_0  &kp DOT       &kp QUESTION
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+&trans        &trans        &trans        &trans        &trans                    &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans  &trans    &trans  &trans                      &trans        &trans        &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         //6
 
-        WIRELESS {
+        NUM2 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans        &trans        &trans        &trans        &trans                               &trans          &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans                               &trans          &trans        &trans        &trans        &bt BT_CLR
-&trans        &trans        &trans        &trans        &trans        &trans    &bootloader  &studio_unlock                &trans        &trans        &bt BT_CLR_ALL
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+&trans        &trans        &trans        &trans        &trans                    &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans  &trans    &trans  &trans                      &trans        &trans        &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
         layer_7 {
