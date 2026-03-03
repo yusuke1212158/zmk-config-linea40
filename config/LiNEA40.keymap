@@ -190,10 +190,10 @@
 
         num1 {
             bindings = <
-&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                       &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                       &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                       &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
-&trans    &trans                  &trans        &trans                   &trans  &trans    &kp ENTER  &kp NUMBER_0                   &kp DOT       &kp ENTER     &kp QUESTION
+&kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET          &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)      &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp TILDE
+&kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans             &trans           &trans                        &kp DOUBLE_QUOTES  &kp COLON      &kp LS(COMMA)     &kp LS(PERIOD)        &kp SLASH
+&kp ESCAPE            &trans                &trans             &trans           &trans       &mo 6    &trans  &trans                            &trans            &trans                &trans
             >;
         };
 
