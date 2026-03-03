@@ -1,5 +1,4 @@
-#include "LiNEA40.dtsi"
-#include <input/processors.dtsi>
+　#include "LiNEA40.dtsi"
 &default_transform {
     col-offset = <6>;
 };
@@ -18,6 +17,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
     };
 };
 
@@ -57,9 +57,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
-        automouse-layer = <2>;
-　　　　　snipe-layers = <2>;
-        scroll-layers = <9>;
+        automouse-layer = <1>;
+        snipe-layers = <2>;
+        scroll-layers = <5>;
         //scroll-layers = <4 5 6>;
     };
 };
@@ -67,14 +67,4 @@
 &trackball_listener {
     status = "okay";
     device = <&trackball>;
-};
-
-// 非マウスキーでAML解除
-&zip_temp_layer {
-    excluded-positions = <
-        16 // J
-        17 // K
-    >;
-    require-prior-idle-ms = <400>;
-    // トラボ誤爆防止
 };
