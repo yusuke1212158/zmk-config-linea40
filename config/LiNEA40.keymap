@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -141,10 +141,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W         &kp E               &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O          &kp P
-&kp A          &kp S         &kp D               &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L          &lt 5 MINUS
-&kp Z          &kp X         &kp C               &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT        &mt RIGHT_SHIFT BACKSPACE
-&mt LCTRL ESC  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &kp INS  &lt 5 ENTER  &lt 2 TAB    &lt 2 BACKSPACE  &lt 4 SPACE         &lt 6 RIGHT_BRACKET  &kp BACKSLASH  &mt RIGHT_SHIFT SLASH
+&kp Q             &kp W         &kp E         &kp R    &kp T                                     &kp Y        &kp U  &kp I             &kp O             &kp P
+&kp A             &kp S         &kp D         &kp F    &kp G                                     &kp H        &kp J  &kp K             &kp L             &mt TAB MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V    &kp B                                     &kp N        &kp M  &kp COMMA         &kp DOT           &kp LS(SLASH)
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &lt 3 SPACE  &lt 5 DELETE    &lt 7 ENTER  &AndroidImg         &kp INT_MUHENKAN  &mt GLOBE ESCAPE  &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -218,9 +218,9 @@
             >;
         };
 
-       //7
+        //7
 
-       CURSOR1 {
+        CURSOR1 {
             bindings = <
 &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LG(H)                        &kp LG(W)             &kp LG(T)              &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
 &kp LG(P)      &trans        &trans            &trans  &trans                           &kp RG(R)             &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
@@ -255,8 +255,8 @@
             >;
         };
 
-       //10
- 
+        //10
+
         WIRELESS {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
