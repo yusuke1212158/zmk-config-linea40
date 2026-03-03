@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,
+            //スクロール方向を逆転,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -177,7 +177,7 @@
 
         //2
 
-        mouse {
+        MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans
@@ -188,7 +188,7 @@
 
         //3
 
-        num1 {
+        MARK1 {
             bindings = <
 &kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET          &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)      &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp TILDE
@@ -199,7 +199,7 @@
 
         //4
 
-        num2 {
+        MARK2 {
             bindings = <
 &kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET          &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)      &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp TILDE
@@ -210,7 +210,7 @@
 
         //5
 
-        function1 {
+        FUNCTION1 {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
@@ -221,7 +221,7 @@
 
         //6
 
-        function2 {
+        FUNCTION2 {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
@@ -230,8 +230,8 @@
             >;
         };
 
-        arrow1 {
-             bindings = <
+        CURSOR1 {
+            bindings = <
 &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LG(H)                        &kp LG(W)             &kp LG(T)              &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
 &kp LG(P)      &trans        &trans            &trans  &trans                           &kp RG(R)             &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
 &trans         &trans        &trans            &trans  &trans                           &kp RG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &kp LA(LG(B))   &kp RG(A)        &kp LG(L)
@@ -241,7 +241,7 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN K_VOLUME_UP>;
         };
 
-        arrow2 {
+        CURSOR2 {
             bindings = <
 &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LG(H)                        &kp LG(W)             &kp LG(T)              &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
 &kp LG(P)      &trans        &trans            &trans  &trans                           &kp RG(R)             &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
@@ -261,7 +261,7 @@
             >;
         };
 
-        bluetooth {
+        WIRELESS {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans        &trans        &trans        &trans        &bootloader                          &trans          &trans        &trans        &trans        &trans
