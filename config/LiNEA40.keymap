@@ -216,23 +216,33 @@
             >;
         };
 
-        layer_7 {
+       //7
+
+       CURSOR1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+&kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LG(H)                        &kp LG(W)             &kp LG(T)              &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
+&kp LG(P)      &trans        &trans            &trans  &trans                           &kp RG(R)             &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
+&trans         &trans        &trans            &trans  &trans                           &kp RG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &kp LA(LG(B))   &kp RG(A)        &kp LG(L)
+&trans         &trans        &trans            &trans  &kp LG(SPACE)  &trans    &trans  &trans                                       &trans          &trans           &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN K_VOLUME_UP>;
+        };
+};
+
+        //8
+
+        CURSOR2 {
+            bindings = <
+&kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LG(H)                        &kp LG(W)             &kp LG(T)              &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
+&kp LG(P)      &trans        &trans            &trans  &trans                           &kp RG(R)             &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
+&trans         &trans        &trans            &trans  &trans                           &kp RG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &kp LA(LG(B))   &kp RG(A)        &kp LG(L)
+&trans         &trans        &trans            &trans  &kp LG(SPACE)  &trans    &trans  &trans                                       &trans          &trans           &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN K_VOLUME_UP>;
         };
 
-        layer_8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
-            >;
-        };
 
         layer_9 {
             bindings = <
