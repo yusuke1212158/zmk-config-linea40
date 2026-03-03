@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -122,7 +122,7 @@
             label = "APPLEIMG";
         };
 
-        ApplEMode: ApplEMode {
+        AppleMode: ApplEMode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -251,7 +251,7 @@
 
         WIRELESS {
             bindings = <
-&bt BT_SEL 0  &ApplEMode  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &bt BT_SEL 0    &ApplEMode  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&bt BT_SEL 0  &AppleMode  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &bt BT_SEL 0    &AppleMode  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans        &trans      &trans        &trans        &bootloader                          &trans          &trans      &trans        &trans        &trans
 &trans        &trans      &trans        &trans        &trans                               &trans          &trans      &trans        &trans        &bt BT_CLR
 &trans        &trans      &trans        &trans        &trans        &trans    &bootloader  &studio_unlock              &trans        &trans        &bt BT_CLR_ALL
