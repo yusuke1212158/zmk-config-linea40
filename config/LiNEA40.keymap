@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -141,10 +141,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R    &kp T                                     &kp Y             &kp U  &kp I             &kp O             &kp P
-&kp A             &kp S         &kp D         &kp F    &kp G                                     &kp H             &kp J  &kp K             &kp L             &mt TAB MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V    &kp B                                     &kp N             &kp M  &kp COMMA         &kp DOT           &kp LS(SLASH)
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &lt 3 SPACE  &lt 5 DELETE    &lt 7 ENTER  &AppleAndroidImg         &kp INT_MUHENKAN  &mt GLOBE ESCAPE  &kp LEFT_SHIFT
+&kp Q             &kp W         &kp E         &kp R    &kp T                                     &kp Y             &kp U  &kp I             &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F    &kp G                                     &kp H             &kp J  &kp K             &kp L     &mt TAB MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V    &kp B                                     &kp N             &kp M  &kp COMMA         &kp DOT   &kp LS(SLASH)
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &lt 3 SPACE  &lt 5 DELETE    &lt 7 ENTER  &AppleAndroidImg         &kp INT_MUHENKAN  &kp HOME  &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -180,7 +180,7 @@
             bindings = <
 &kp EXCLAMATION       &kp AT                &kp HASH           &kp DOLLAR       &kp PERCENT                   &kp CARET          &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                        &kp LS(MINUS)      &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp TILDE
-&kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans             &trans           &trans                        &kp DOUBLE_QUOTES  &kp COLON      &kp LS(COMMA)     &kp LS(PERIOD)        &kp SLASH
+&kp LS(LG(S))         &trans                &trans             &trans           &trans                        &kp DOUBLE_QUOTES  &kp COLON      &kp LS(COMMA)     &kp LS(PERIOD)        &kp SLASH
 &kp ESCAPE            &trans                &trans             &trans           &trans       &mo 6    &trans  &trans                            &trans            &trans                &trans
             >;
         };
