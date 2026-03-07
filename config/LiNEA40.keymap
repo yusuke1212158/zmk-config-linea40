@@ -131,7 +131,6 @@
                   <&to 1>;
         };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
