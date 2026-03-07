@@ -130,6 +130,8 @@
                 <&macro_wait 200>
                 <&to 1>;
         };
+　　　};
+
 
     keymap {
         compatible = "zmk,keymap";
