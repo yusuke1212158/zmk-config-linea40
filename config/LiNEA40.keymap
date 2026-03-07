@@ -122,13 +122,13 @@
             label = "APPLEIMG";
         };
 
-        apple_mode: apple_mode {
+        Apple_mode: apple_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&bt BT_SEL 0>;
-                <&macro_wait 200>;
-                <&to 1>;
+            bindings
+                = <&bt BT_SEL 0>,
+                  <&macro_wait 200>,
+                  <&to 1>;
         };
     };
 };
