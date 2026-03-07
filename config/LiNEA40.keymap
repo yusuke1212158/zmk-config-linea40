@@ -122,7 +122,7 @@
             label = "APPLEIMG";
         };
 
-        apple_mode: apple_mode {
+       　 apple_mode: apple_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -130,8 +130,8 @@
                 <&macro_wait 200>
                 <&to 1>;
         };
-　　　};
-
+　　};
+};
 
     keymap {
         compatible = "zmk,keymap";
