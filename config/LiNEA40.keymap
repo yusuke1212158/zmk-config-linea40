@@ -129,8 +129,8 @@
                 = <&bt BT_SEL 0>,
                   <&macro_wait 200>,
                   <&to 1>;
-        };
-    };
+        }; // ここで macro ノードを閉じる
+    }; // ここでルートノード ( / ) を閉じる
 
     keymap {
         compatible = "zmk,keymap";
