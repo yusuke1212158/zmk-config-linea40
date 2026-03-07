@@ -127,8 +127,8 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 0>
-                , <&macro_wait_time 200>
-                , <&to 1>;
+                , <&macro_wait_time 500>
+                , <&tog 1>;
         };
     };
 
