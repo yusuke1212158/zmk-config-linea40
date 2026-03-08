@@ -1,5 +1,6 @@
 #include "LiNEA40.dtsi"
 #include <input/processors.dtsi>
+#include <input/processors/runtime-input-processor.dtsi>
 &default_transform {
     col-offset = <6>;
 };
@@ -18,7 +19,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
+　　　　　input-processors = <&mouse_runtime_input_processor>;
     };
 };
 
