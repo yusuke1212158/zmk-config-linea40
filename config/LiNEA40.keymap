@@ -64,6 +64,10 @@
     };
 };
 
+&trackball_listener {
+    input-processors = <&mouse_runtime_input_processor>;
+　　};
+};
 / {
     combos {
         compatible = "zmk,combos";
