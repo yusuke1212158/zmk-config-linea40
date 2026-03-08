@@ -79,3 +79,7 @@
     require-prior-idle-ms = <200>;
     // トラボ誤爆防止
 };
+
+&trackball_listener {
+    input-processors = <&mouse_runtime_input_processor>;
+};
