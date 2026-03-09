@@ -82,15 +82,14 @@
 };
 
 / {
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&mouse_runtime_input_processor>;
-　　　　　};
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&mouse_runtime_input_processor>;
+    }; // ここで閉じカッコの数を調整
 
-        scroller {
-            layers = <9>;
-            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
-        };
-    };
+    scroller {
+        layers = <9>;
+        input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
+    };
 };
