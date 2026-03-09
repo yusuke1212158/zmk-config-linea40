@@ -12,17 +12,7 @@
         , <&xiao_d 9 GPIO_ACTIVE_HIGH>  //col1-D9
         , <&xiao_d 8 GPIO_ACTIVE_HIGH>  //col2-D8
         , <&xiao_d 7 GPIO_ACTIVE_HIGH>  //col3-D7
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>  //col4-NFC2
-        ;
-};
-
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-    };
-};
-
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>  //
 
 &pinctrl {
     spi0_default: spi0_default {
