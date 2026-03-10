@@ -46,13 +46,6 @@
     };
 };
 
-&msc_input_listener {
-    speed_up {
-        layers = <FUNCTION>;
-        input-processors = <&zip_wheel_scaler 3 1>; //スクロールを3倍速にする
-    };
-};
-
 / {
     behaviors {
         re_kp: sensor_rotate_kp {
