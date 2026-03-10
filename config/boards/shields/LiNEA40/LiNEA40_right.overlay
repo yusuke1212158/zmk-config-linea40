@@ -74,7 +74,6 @@
     scroller_listener: scroller_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* layers = <9>;  <-- ここを削除！ */
         input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
     };
 };
