@@ -54,14 +54,16 @@
 };
 
 &trackball_listener {
+    /* 通常時のマウス移動（これがないとマウスが動きません） */
+    input-processors = <&mouse_runtime_input_processor>;
+
+    /* レイヤー9の時だけ発動するスクロール変換 */
     scroller {
-        layers = <9>; // レイヤー9（SCROLL）のときだけ有効
+        layers = <9>;
         input-processors = <&zip_xy_to_scroll_mapper>, <&scroll_runtime_input_processor>;
     };
-
-    input-processors = <&mouse_runtime_input_processor>;
-　　　};
 };
+
 
 / {
     combos {
