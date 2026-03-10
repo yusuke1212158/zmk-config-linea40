@@ -74,13 +74,16 @@
     // トラボ誤爆防止
 };
 
-&trackball_listener {
-    /* 通常時のマウス移動（これがないとマウスが動きません） */
-    input-processors = <&mouse_runtime_input_processor>;
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&mouse_runtime_input_processor>;
 
-    /* レイヤー9の時だけ発動するスクロール変換 */
-    scroller {
-        layers = <9>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&scroll_runtime_input_processor>;
+        scroller {
+            layers = <9>;
+            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
+        };
     };
 };
+
