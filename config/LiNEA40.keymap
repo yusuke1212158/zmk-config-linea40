@@ -216,15 +216,13 @@
         };
 
         //9
-
         SCROLL {
             bindings = <
-                &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans        &trans &trans &trans
             >;
-            /* ここでスクロール入力をバインド */
             sensor-bindings = <&inc_dec_kp SCROLL_UP SCROLL_DOWN>;
         };
 
