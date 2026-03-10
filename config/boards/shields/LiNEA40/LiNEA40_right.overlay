@@ -58,7 +58,9 @@
     };
 };
 
-/* 入力リスナーとスクロールの設定 */
+/* ... (中略：spi0 の Trackball 定義までそのまま) ... */
+
+/* ここからが正しいリスナー設定 */
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
@@ -66,13 +68,15 @@
         input-processors = <&mouse_runtime_input_processor>;
     };
 
-    scroller {
+    scroller_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        /* ここにレイヤー設定を移します */
         layers = <9>;
         input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
     };
 };
+
 
 // 非マウスキーで自動マウスレイヤー解除設定
 &zip_temp_layer {
