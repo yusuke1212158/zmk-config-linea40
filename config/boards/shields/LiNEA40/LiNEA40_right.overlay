@@ -65,20 +65,18 @@
 };
 
 / {
-    /* マウス用 */
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&mouse_runtime_input_processor>;
     };
 
-    /* スクロール用: レイヤー条件はここで制御する */
     scroller_listener: scroller_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* 注意: ここでエラーが出る場合は、この一行を削除して次の手順へ進む */
-        layers = <9>; 
+        /* layers = <9>;  <-- ここを削除！ */
         input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
     };
 };
+
 
