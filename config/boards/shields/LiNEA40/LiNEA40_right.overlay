@@ -57,10 +57,14 @@
     };
 };
 
-// 非マウスキーで自動マウスレイヤー解除設定
+// 非マウスキーでAML解除
 &zip_temp_layer {
-    excluded-positions = <16 17>;
+    excluded-positions = <
+        16 // J
+        17 // K
+    >;
     require-prior-idle-ms = <400>;
+    // トラボ誤爆防止
 };
 
 / {
