@@ -46,7 +46,44 @@
     };
 };
 
+&msc_input_listener {
+    speed_up {
+        layers = <FUNCTION>;
+        input-processors = <&zip_wheel_scaler 3 1>; //スクロールを3倍速にする
+    };
+};
+
+&trackball_listener {
+    /* スクロール用の設定 */
+
+    scroller {
+        layers = <SCROLL>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&scroll_runtime_input_processor>,
+            <&zip_xy_to_scroll_mapper>;
+    };
+
+    /* マウス用の設定 */
+
+    input-processors = <&mouse_runtime_input_processor>;
+};
+
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Bt {
+            bindings = <&mo 10>;
+            key-positions = <34 35>;
+        };
+
+        scroll {
+            bindings = <&mo 9>;
+            key-positions = <16 17>;
+        };
+    };
+
     behaviors {
         re_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -60,22 +97,6 @@
             bindings = <&msc>, <&msc>;
 
             tap-ms = <20>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        combo_scroll: scroll_layer {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&mo 9>;
-        };
-
-        combo_bt: bt_layer {
-            timeout-ms = <50>;
-            key-positions = <34 35>;
-            bindings = <&mo 10>;
         };
     };
 
@@ -232,8 +253,6 @@
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         //10
