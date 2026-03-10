@@ -1,9 +1,6 @@
 #include "LiNEA40.dtsi"
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
-#include <input/processors/scaler.dtsi>
-#include <input/processors/xy_scaler.dtsi>
-#include <input/processors/invert.dtsi>
 #include <behaviors/battery_history_request.dtsi>
 &default_transform {
     col-offset = <6>;
@@ -81,19 +78,13 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        
-        /* 1. 通常のマウス動作 */
+        /* 通常時のマウス移動 */
         input-processors = <&mouse_runtime_input_processor>;
 
-        /* 2. レイヤー9の時だけのスクロール設定（反転付き） */
+        /* レイヤー9の時だけスクロールに変換 */
         scroller {
             layers = <9>;
-            /* Y軸を反転させるために倍率をマイナスにします */
-            input-processors = <&zip_xy_to_scroll_mapper>, 
-                               <&zip_y_scaler (-1) 1>, 
-                               <&scroll_runtime_input_processor>;
+            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
         };
     };
 };
-
-
