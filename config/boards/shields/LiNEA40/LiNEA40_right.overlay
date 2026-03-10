@@ -45,11 +45,7 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>; //NCS-NFC1
 
-/* 修正案：親ノードの中に正しく記述されているか確認 */
-&spi0 {
-    status = "okay";
-    
-    /* トラックボールの定義 */
+    /* トラックボールの定義をここに含める */
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
@@ -59,6 +55,7 @@
         automouse-layer = <2>;
     };
 };
+
 
 
 
