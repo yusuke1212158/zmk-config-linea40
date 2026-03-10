@@ -78,13 +78,18 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* 通常時のマウス移動 */
+        
+        /* 1. 通常のマウス動作 */
         input-processors = <&mouse_runtime_input_processor>;
 
-        /* レイヤー9の時だけスクロールに変換 */
+        /* 2. レイヤー9の時だけのスクロール設定（反転付き） */
         scroller {
             layers = <9>;
-            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
+            input-processors = <&zip_xy_to_scroll_mapper>, 
+                               <&zip_input_transform_invert_y>, 
+                               <&scroll_runtime_input_processor>;
         };
     };
 };
+
+
