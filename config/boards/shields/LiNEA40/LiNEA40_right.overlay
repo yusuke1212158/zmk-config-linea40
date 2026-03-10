@@ -1,6 +1,7 @@
 #include "LiNEA40.dtsi"
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
+#include <input/processors/scaler.dtsi
 #include <behaviors/battery_history_request.dtsi>
 &default_transform {
     col-offset = <6>;
@@ -85,8 +86,9 @@
         /* 2. レイヤー9の時だけのスクロール設定（反転付き） */
         scroller {
             layers = <9>;
+            /* Y軸を反転させるために倍率をマイナスにします */
             input-processors = <&zip_xy_to_scroll_mapper>, 
-                               <&zip_input_transform_invert_y>, 
+                               <&zip_y_scaler (-1) 1>, 
                                <&scroll_runtime_input_processor>;
         };
     };
