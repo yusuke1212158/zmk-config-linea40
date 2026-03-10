@@ -270,4 +270,17 @@
             bindings = <&mo 10>;
         };
     };
+
+/* 既存の keymap の下に追記 */
+&trackball_listener {
+    /* マウス用のリスナー設定 */
+    input-processors = <&mouse_runtime_input_processor>;
+};
+
+&scroller_listener {
+    /* スクロール用のリスナー設定 */
+    layers = <9>;
+    input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
+};
+
 };
