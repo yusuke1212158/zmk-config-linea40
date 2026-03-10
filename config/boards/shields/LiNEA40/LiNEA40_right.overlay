@@ -2,18 +2,17 @@
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
 #include <behaviors/battery_history_request.dtsi>
-
 &default_transform {
     col-offset = <6>;
 };
 
 &kscan0 {
     col-gpios
-        = <&xiao_d 10 GPIO_ACTIVE_HIGH> // col0-D10
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH>  // col1-D9
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH>  // col2-D8
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH>  // col3-D7
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // col4-D10 (修正済み)
+        = <&xiao_d 10 GPIO_ACTIVE_HIGH> //col0-D10
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>  //col1-D9
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH>  //col2-D8
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH>  //col3-D7
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // ここを修正
         ; 
 }; 
 
@@ -44,9 +43,9 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>; // NCS-NFC1
+    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>; //NCS-NFC1
 
-    /* トラックボールデバイス定義: ラベルを trackball に統一 */
+    /* トラックボールの定義をここに含める */
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
@@ -55,6 +54,14 @@
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         automouse-layer = <2>;
     };
+};
+
+
+
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
 };
 
 // 非マウスキーでAML解除
@@ -72,14 +79,10 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&mouse_runtime_input_processor>;
-    };
+    }; // ここで閉じカッコの数を調整
 
-    scroller_listener: scroller_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
+    scroller {
+        layers = <9>;
         input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
     };
 };
-
-
-
