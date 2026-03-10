@@ -1,7 +1,9 @@
 #include "LiNEA40.dtsi"
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
-#include <input/processors/scaler.dtsi
+#include <input/processors/scaler.dtsi>
+#include <input/processors/xy_scaler.dtsi>
+#include <input/processors/invert.dtsi>
 #include <behaviors/battery_history_request.dtsi>
 &default_transform {
     col-offset = <6>;
