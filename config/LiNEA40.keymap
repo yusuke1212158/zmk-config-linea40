@@ -70,20 +70,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        Bt {
-            bindings = <&mo 10>;
-            key-positions = <34 35>;
-        };
-
-        scroll {
-            bindings = <&mo 9>;
-            key-positions = <16 17>;
-        };
-    };
-
     behaviors {
         re_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -284,6 +270,7 @@
             bindings = <&mo 10>;
         };
     };
+ 
     combos {
         compatible = "zmk,combos";
 
@@ -299,4 +286,5 @@
             bindings = <&mo 10>;
         };
     };
-}; // ← これがファイル全体の閉じ括弧になるように
+};
+
