@@ -2,17 +2,18 @@
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
 #include <behaviors/battery_history_request.dtsi>
+
 &default_transform {
     col-offset = <6>;
 };
 
 &kscan0 {
     col-gpios
-        = <&xiao_d 10 GPIO_ACTIVE_HIGH> //col0-D10
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH>  //col1-D9
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH>  //col2-D8
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH>  //col3-D7
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // ここを修正
+        = <&xiao_d 10 GPIO_ACTIVE_HIGH> // col0-D10
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>  // col1-D9
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH>  // col2-D8
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH>  // col3-D7
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // col4-D10 (修正済み)
         ; 
 }; 
 
@@ -43,9 +44,10 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>; //NCS-NFC1
+    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>; // NCS-NFC1
 
-    Trackball: trackball@0 {
+    /* トラックボールデバイス定義: ラベルを trackball に統一 */
+    trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
@@ -56,34 +58,24 @@
     };
 };
 
-
-
-
-
-&trackball_listener {
-    status = "okay";
-    device = <&trackball>;
-};
-
-// 非マウスキーでAML解除
-&zip_temp_layer {
-    excluded-positions = <
-        16 // J
-        17 // K
-    >;
-    require-prior-idle-ms = <400>;
-    // トラボ誤爆防止
-};
-
+/* 入力リスナーとスクロールの設定 */
 / {
-    trackball_listener: trackball_listener {
+    trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&mouse_runtime_input_processor>;
-    }; // ここで閉じカッコの数を調整
+    };
 
     scroller {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
         layers = <9>;
         input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
     };
+};
+
+// 非マウスキーで自動マウスレイヤー解除設定
+&zip_temp_layer {
+    excluded-positions = <16 17>;
+    require-prior-idle-ms = <400>;
 };
