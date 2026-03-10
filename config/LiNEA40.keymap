@@ -54,19 +54,13 @@
 };
 
 &trackball_listener {
-    /* スクロール用の設定 */
-
     scroller {
-        layers = <SCROLL>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&scroll_runtime_input_processor>,
-            <&zip_xy_to_scroll_mapper>;
+        layers = <9>; // レイヤー9（SCROLL）のときだけ有効
+        input-processors = <&zip_xy_to_scroll_mapper>, <&scroll_runtime_input_processor>;
     };
 
-    /* マウス用の設定 */
-
     input-processors = <&mouse_runtime_input_processor>;
+　　　};
 };
 
 / {
