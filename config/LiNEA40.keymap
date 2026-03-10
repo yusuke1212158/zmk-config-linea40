@@ -46,7 +46,6 @@
     };
 };
 
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -231,6 +230,8 @@
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         //10
