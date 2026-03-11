@@ -56,14 +56,6 @@
     };
 };
 
-
-
-
-&trackball_listener {
-    status = "okay";
-    device = <&trackball>;
-};
-
 // 非マウスキーでAML解除
 &zip_temp_layer {
     excluded-positions = <
