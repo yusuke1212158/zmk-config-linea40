@@ -79,22 +79,17 @@
  * Root
  * =============================== */
  / {
-    /* -------- Encoder scroll processors -------- */
-
-    /* 通常：ナチュラル（右回り＝下） */
     encoder_scroll_natural: encoder_scroll_natural {
         compatible = "zmk,scroll-runtime-input-processor";
         #input-processor-cells = <0>;
         invert-y;
     };
 
-    /* Layer 9：非ナチュラル */
     encoder_scroll_unnatural: encoder_scroll_unnatural {
         compatible = "zmk,scroll-runtime-input-processor";
         #input-processor-cells = <0>;
     };
 
-    /* -------- Trackball listener -------- */
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
@@ -110,7 +105,6 @@
         };
     };
 
-    /* -------- Left encoder listener -------- */
     left_encoder_listener {
         status = "okay";
         compatible = "zmk,input-listener";
@@ -123,5 +117,4 @@
             input-processors = <&encoder_scroll_unnatural>;
         };
     };
-};
 };
