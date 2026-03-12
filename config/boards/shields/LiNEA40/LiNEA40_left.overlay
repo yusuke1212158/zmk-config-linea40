@@ -18,7 +18,7 @@
 };
 
 /* ===============================
- * SPI / Trackball
+ * Trackball (SPI)
  * =============================== */
 &pinctrl {
     spi0_default: spi0_default {
@@ -69,8 +69,8 @@
  * =============================== */
 &zip_temp_layer {
     excluded-positions = <
-        16 /* J */
-        17 /* K */
+        16
+        17
     >;
     require-prior-idle-ms = <400>;
 };
@@ -79,16 +79,14 @@
  * Root
  * =============================== */
  / {
-    /* -------- Trackball listener -------- */
+    /* Trackball listener */
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 通常：マウス移動 */
         input-processors = <&mouse_runtime_input_processor>;
 
-        /* Layer 9：スクロール */
         scroller {
             layers = <9>;
             input-processors =
@@ -97,13 +95,12 @@
         };
     };
 
-    /* -------- Left encoder listener -------- */
+    /* Left encoder listener */
     left_encoder_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&left_encoder>;
 
-        /* エンコーダーは常にスクロール */
         input-processors = <&scroll_runtime_input_processor>;
     };
 };
