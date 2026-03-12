@@ -65,7 +65,7 @@
 };
 
 /* ===============================
- * AML 誤爆防止（J+K）
+ * AML 誤爆防止（J + K）
  * =============================== */
 &zip_temp_layer {
     excluded-positions = <
@@ -79,24 +79,16 @@
  * Root
  * =============================== */
  / {
-    encoder_scroll_natural: encoder_scroll_natural {
-        compatible = "zmk,scroll-runtime-input-processor";
-        #input-processor-cells = <0>;
-        invert-y;
-    };
-
-    encoder_scroll_unnatural: encoder_scroll_unnatural {
-        compatible = "zmk,scroll-runtime-input-processor";
-        #input-processor-cells = <0>;
-    };
-
+    /* -------- Trackball listener -------- */
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
+        /* 通常：マウス移動 */
         input-processors = <&mouse_runtime_input_processor>;
 
+        /* Layer 9：スクロール */
         scroller {
             layers = <9>;
             input-processors =
@@ -105,16 +97,13 @@
         };
     };
 
+    /* -------- Left encoder listener -------- */
     left_encoder_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&left_encoder>;
 
-        input-processors = <&encoder_scroll_natural>;
-
-        unnatural {
-            layers = <9>;
-            input-processors = <&encoder_scroll_unnatural>;
-        };
+        /* エンコーダーは常にスクロール */
+        input-processors = <&scroll_runtime_input_processor>;
     };
 };
