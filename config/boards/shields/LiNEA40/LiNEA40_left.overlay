@@ -84,12 +84,14 @@
     /* 通常：ナチュラル（右回り＝下） */
     encoder_scroll_natural: encoder_scroll_natural {
         compatible = "zmk,scroll-runtime-input-processor";
+        #input-processor-cells = <0>;
         invert-y;
     };
 
     /* Layer 9：非ナチュラル */
     encoder_scroll_unnatural: encoder_scroll_unnatural {
         compatible = "zmk,scroll-runtime-input-processor";
+        #input-processor-cells = <0>;
     };
 
     /* -------- Trackball listener -------- */
@@ -98,10 +100,8 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 通常：マウス */
         input-processors = <&mouse_runtime_input_processor>;
 
-        /* Layer 9：スクロール */
         scroller {
             layers = <9>;
             input-processors =
@@ -116,13 +116,12 @@
         compatible = "zmk,input-listener";
         device = <&left_encoder>;
 
-        /* 通常：ナチュラルスクロール */
         input-processors = <&encoder_scroll_natural>;
 
-        /* Layer 9：非ナチュラルスクロール */
         unnatural {
             layers = <9>;
             input-processors = <&encoder_scroll_unnatural>;
         };
     };
+};
 };
