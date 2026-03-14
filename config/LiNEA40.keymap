@@ -129,6 +129,15 @@
 
             label = "ANDROIDMODE";
         };
+
+　　　　　app_switcher: app_switcher {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>;
+        };
     };
 
     keymap {
