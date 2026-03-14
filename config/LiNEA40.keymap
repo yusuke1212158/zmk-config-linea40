@@ -234,7 +234,7 @@
 &kp LC(MINUS)  &kp LC(PLUS)  &kp LC(NUMBER_0)  &trans     &kp LG(ENTER)                         &kp LC(W)           &kp LC(T)            &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
 &kp LG(P)      &trans        &trans            &trans     &trans                                &kp RG(R)           &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(F)
 &kp LG(SLASH)  &kp LG(N)     &kp LG(E)         &kp LG(L)  &kp LG(B)                             &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp LC(LA(B))   &kp RC(A)        &kp LC(L)
-&trans         &trans        &trans            &trans     &kp LG(SPACE)  &kp LG(TAB)    &trans  &trans                                   &trans          &trans           &trans
+&trans         &trans        &trans            &trans     &kp LG(SPACE)  &kp LA(TAB)    &trans  &trans                                   &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN K_VOLUME_UP>;
