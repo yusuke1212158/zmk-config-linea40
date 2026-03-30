@@ -156,7 +156,7 @@
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &lt 3 SPACE  &lt 5 BACKSPACE    &lt 7 ENTER  &AppleAndroidImg         &tog 1     &mt TAB ESCAPE  &kp HOME
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         //1
@@ -250,7 +250,7 @@
 &trans         &trans        &trans            &trans  &kp LG(SPACE)  &app_switcher    &trans  &trans                                       &trans          &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN K_VOLUME_UP>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         //9
