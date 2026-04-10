@@ -257,10 +257,10 @@
 
         SCROLL {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans            &trans
-&trans            &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &kp LEFT_CONTROL  &trans
-&trans            &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans            &trans
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans            &trans
+&trans            &trans  &trans            &trans  &trans                    &trans  &trans  &trans  &trans            &trans
+&trans            &trans  &trans            &trans  &trans                    &trans  &trans  &trans  &kp LEFT_CONTROL  &trans
+&trans            &trans  &trans            &trans  &trans                    &trans  &trans  &trans  &trans            &trans
+&kp LEFT_CONTROL  &trans  &kp LEFT_COMMAND  &trans  &trans  &trans    &trans  &trans          &trans  &trans            &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
