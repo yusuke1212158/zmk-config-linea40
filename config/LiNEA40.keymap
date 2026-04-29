@@ -117,6 +117,20 @@
 
             label = "APP_SWITCHER";
         };
+
+        help: help {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp H>,
+                <&macro_release>,
+                <&kp TAB>;
+
+            label = "HELP";
+        };
     };
 
     keymap {
