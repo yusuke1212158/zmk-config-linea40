@@ -143,6 +143,18 @@
 
             label = "APP_SWITCHER";
         };
+
+        appswicher: appswicher {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap_time 200>,
+                <&kp UP_ARROW>;
+
+            label = "APPSWICHER";
+        };
     };
 
     keymap {
