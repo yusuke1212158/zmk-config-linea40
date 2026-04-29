@@ -143,18 +143,6 @@
 
             label = "APP_SWITCHER";
         };
-
-        appswicher: appswicher {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp GLOBE>,
-                <&macro_tap_time 200>,
-                <&kp UP_ARROW>;
-
-            label = "APPSWICHER";
-        };
     };
 
     keymap {
@@ -165,7 +153,7 @@
 &kp Q      &kp W         &kp E         &kp R    &kp T                                        &kp Y             &kp U  &kp I      &kp O           &kp P
 &kp A      &kp S         &kp D         &kp F    &kp G                                        &kp H             &kp J  &kp K      &kp L           &mt RIGHT_SHIFT MINUS
 &kp LS(Z)  &kp X         &kp C         &kp V    &kp B                                        &kp N             &kp M  &kp COMMA  &kp DOT         &kp LS(SLASH)
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &lt 3 SPACE  &lt 5 BACKSPACE    &lt 7 ENTER  &AppleAndroidImg         &tog 1     &mt ESCAPE TAB  &kp GLOBE
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &lt 3 SPACE  &lt 5 BACKSPACE    &lt 7 ENTER  &AppleAndroidImg         &tog 1     &mt ESCAPE TAB  &app_switcher
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
