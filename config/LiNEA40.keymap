@@ -95,11 +95,7 @@
         Macmode: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&bt BT_SEL 1>,
-                <&macro_wait_time 200>,
-                <&tog 1>;
+            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&tog 1>;
 
             label = "NEW_MACRO";
         };
@@ -116,20 +112,6 @@
                 <&kp GLOBE>;
 
             label = "APP_SWITCHER";
-        };
-
-        help: help {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp TAB>,
-                <&macro_tap>,
-                <&kp H>,
-                <&macro_release>,
-                <&kp TAB>;
-
-            label = "HELP";
         };
 
         controlcenter: controlcenter {
@@ -174,7 +156,7 @@
             label = "APPLIST";
         };
 
-        AppList: AppList {
+        applist: AppList {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -277,7 +259,7 @@
             bindings = <
 &kp LG(MINUS)  &kp LG(PLUS)   &kp LG(NUMBER_0)  &trans    &kp LG(H)                               &kp LG(W)             &kp LG(T)              &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
 &kp LG(P)      &trans         &trans            &trans    &trans                                  &kp RG(R)             &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
-&trans         &tuutincenter  &controlcenter    &AppList  &docs                                   &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(LA(B))   &kp RG(A)        &kp LG(L)
+&trans         &tuutincenter  &controlcenter    &applist  &docs                                   &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(LA(B))   &kp RG(A)        &kp LG(L)
 &trans         &trans         &trans            &trans    &kp LG(SPACE)  &app_switcher    &trans  &trans                                       &trans          &trans           &trans
             >;
 
