@@ -95,7 +95,11 @@
         Macmode: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&tog 1>;
+            bindings =
+                <&bt BT_SEL 1>,
+                <&macro_wait_time 200>,
+                <&macro_tap>,
+                <&tog 1>;
 
             label = "NEW_MACRO";
         };
@@ -142,7 +146,7 @@
             label = "TUUTINCENTER";
         };
 
-        docs: docs{
+        docs: docs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
