@@ -145,6 +145,48 @@
 
             label = "CONTROLCENTER";
         };
+
+        tuutincenter: tuutincenter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp N>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "TUUTINCENTER";
+        };
+
+        docs: applist {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "APPLIST";
+        };
+
+        AppList: AppList {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp LS(A)>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "APPLIST";
+        };
     };
 
     keymap {
@@ -233,10 +275,10 @@
 
         CURSOR1 {
             bindings = <
-&kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans     &kp LG(H)                               &kp LG(W)           &kp LG(T)            &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
-&kp LG(P)      &trans        &trans            &trans     &trans                                  &kp RG(R)           &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
-&kp LG(SLASH)  &kp LG(N)     &controlcenter    &kp LG(L)  &kp LG(B)                               &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp LG(LA(B))   &kp RG(A)        &kp LG(L)
-&trans         &trans        &trans            &trans     &kp LG(SPACE)  &app_switcher    &trans  &trans                                   &trans          &trans           &trans
+&kp LG(MINUS)  &kp LG(PLUS)   &kp LG(NUMBER_0)  &trans    &kp LG(H)                               &kp LG(W)           &kp LG(T)            &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
+&kp LG(P)      &trans         &trans            &trans    &trans                                  &kp RG(R)           &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(F)
+&trans         &tuutincenter  &controlcenter    &AppList  &docs                                   &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp LG(LA(B))   &kp RG(A)        &kp LG(L)
+&trans         &trans         &trans            &trans    &kp LG(SPACE)  &app_switcher    &trans  &trans                                   &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN K_VOLUME_UP>;
