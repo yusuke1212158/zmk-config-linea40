@@ -142,7 +142,7 @@
             label = "TUUTINCENTER";
         };
 
-        docs: applist {
+        docs: docs{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -153,7 +153,7 @@
                 <&macro_release>,
                 <&kp GLOBE>;
 
-            label = "APPLIST";
+            label = "DOCS";
         };
 
         applist: AppList {
