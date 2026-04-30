@@ -233,7 +233,7 @@
 
         CURSOR1 {
             bindings = <
-&kp LC(MINUS)  &kp LC(PLUS)  &kp LC(NUMBER_0)  &trans     &kp LG(H)                               &kp LC(W)           &kp LC(T)            &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
+&kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans     &kp LG(H)                               &kp LC(W)           &kp LC(T)            &kp UP_ARROW    &kp LS(LC(TAB))  &kp LC(TAB)
 &kp LG(P)      &trans        &trans            &trans     &help                                   &kp RG(R)           &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(F)
 &kp LG(SLASH)  &kp LG(N)     &controlcenter    &kp LG(L)  &kp LG(B)                               &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp LC(LA(B))   &kp RC(A)        &kp LC(L)
 &trans         &trans        &trans            &trans     &kp LG(SPACE)  &app_switcher    &trans  &trans                                   &trans          &trans           &trans
