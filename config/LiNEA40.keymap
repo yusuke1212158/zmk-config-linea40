@@ -242,7 +242,7 @@
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &lt 3 SPACE  &lt 5 BACKSPACE    &lt 7 ENTER  &AppleImg         &kp TAB    &kp ESCAPE  &kp GLOBE
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         //1
