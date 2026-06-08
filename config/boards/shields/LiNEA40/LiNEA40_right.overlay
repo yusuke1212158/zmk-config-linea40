@@ -1,5 +1,4 @@
 #include "LiNEA40.dtsi"
-#include <input/processors.dtsi>
 &default_transform {
     col-offset = <6>;
 };
@@ -31,7 +30,6 @@
     require-prior-idle-ms = <400>;
     // トラボ誤爆防止
 };
-
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -73,4 +71,9 @@
         scroll-layers = <5>;
         //scroll-layers = <4 5 6>;
     };
+};
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
 };
