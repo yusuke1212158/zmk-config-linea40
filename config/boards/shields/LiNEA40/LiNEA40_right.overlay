@@ -1,4 +1,7 @@
 #include "LiNEA40.dtsi"
+#include <input/processors.dtsi>
+#include <input/processors/runtime-input-processor.dtsi>
+#include <behaviors/battery_history_request.dtsi>
 &default_transform {
     col-offset = <6>;
 };
@@ -19,6 +22,16 @@
         device = <&trackball>;
 
     };
+};
+
+// 非マウスキーでAML解除
+&zip_temp_layer {
+    excluded-positions = <
+        16 // J
+        17 // K
+    >;
+    require-prior-idle-ms = <400>;
+    // トラボ誤爆防止
 };
 
 
@@ -64,7 +77,17 @@
     };
 };
 
-&trackball_listener {
-    status = "okay";
-    device = <&trackball>;
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        /* 通常時のマウス移動 */
+        input-processors = <&mouse_runtime_input_processor>;
+
+        /* レイヤー9の時だけスクロールに変換 */
+        scroller {
+            layers = <9>;
+            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
+        };
+    };
 };
