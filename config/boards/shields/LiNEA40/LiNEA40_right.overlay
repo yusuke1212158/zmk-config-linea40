@@ -74,18 +74,3 @@
         //scroll-layers = <4 5 6>;
     };
 };
-
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        /* 通常時のマウス移動 */
-        input-processors = <&mouse_runtime_input_processor>;
-
-        /* レイヤー9の時だけスクロールに変換 */
-        scroller {
-            layers = <9>;
-            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
-        };
-    };
-};
